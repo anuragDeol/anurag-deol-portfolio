@@ -1,24 +1,12 @@
 "use client";
-
 import React, { useEffect, useState, createContext, useContext } from "react";
 
-type Theme = "light" | "dark";
-
-type ThemeContextProviderProps = {
-  children: React.ReactNode;
-};
-
-type ThemeContextType = {
-  theme: Theme;
-  toggleTheme: () => void;
-};
-
-const ThemeContext = createContext<ThemeContextType | null>(null);
+const ThemeContext = createContext<any>(null);
 
 export default function ThemeContextProvider({
   children,
-}: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+}: any) {
+  const [theme, setTheme] = useState<string>("light");
 
   const toggleTheme = () => {
     if (theme === "light") {
@@ -33,7 +21,7 @@ export default function ThemeContextProvider({
   };
 
   useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
+    const localTheme = window.localStorage.getItem("theme");
 
     if (localTheme) {
       setTheme(localTheme);
