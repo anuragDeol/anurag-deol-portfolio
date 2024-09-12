@@ -42,8 +42,6 @@ export const sendEmail = async (formData: FormData) => {
       `,
     });
 
-    console.log('info:', info)
-
     return {
       data: info,
     };
