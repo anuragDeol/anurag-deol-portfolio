@@ -8,16 +8,19 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import { useSectionInView } from "@/lib/hooks";
-import profile_image from "@/../public/assets/images/profile_image.jpg";
+import profile_image from "@/../public/assets/images/profile_image.jpeg";
+import profile_image_dark from "@/../public/assets/images/profile_image_dark.jpeg";
+import { useTheme } from "@/context/theme-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const { theme } = useTheme();
 
   return (
     <section
       ref={ref}
       id="home"
-      className="flex flex-col-reverse md:flex-row mb-28 max-w-[1024px] xl:max-w-[1024px] text-center scroll-mt-[100rem] gap-10 md:gap-0"
+      className="flex flex-col-reverse md:flex-row mb-28 max-w-[1024px] xl:max-w-[1024px] text-center scroll-mt-[100rem] gap-10"
     >
 
       <motion.div className="w-full md:w-[90%] flex flex-col items-center md:items-start justify-center">
@@ -42,12 +45,12 @@ export default function Intro() {
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <div className="flex gap-4">
               <a
-                className="group bg-white px-7 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 text-sm"
+                className="group bg-white px-4 lg:px-7 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 text-sm"
                 href={`/assets/docs/Anurag_Resume.pdf`}
                 download
               >
                 My Resume{" "}
-                <HiDownload className="opacity-60 transition" />
+                <HiDownload className="opacity-60 transition text-base" />
               </a>
             </div>
 
@@ -90,12 +93,12 @@ export default function Intro() {
         }}
       >
         <Image
-          src={profile_image}
+          src={theme === "light" ? profile_image : profile_image_dark}
           alt="Anurag Deol"
           // width={700}
           // height={50}
           priority={true}
-          className="h-[250px] md:h-[350px] w-[250px] md:min-w-[350px] rounded-[100px] object-cover shadow-xl"
+          className="h-[250px] md:h-[300px] w-[250px] md:min-w-[300px] rounded-full md:rounded-[100px] object-cover shadow-xl"
         />
       </motion.div>
     </section>

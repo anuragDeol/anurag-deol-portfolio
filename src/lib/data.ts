@@ -39,26 +39,35 @@ export const projectsData = [
   {
     title: "Deskera Copilot",
     description:
-      "Deskera Copilot is an AI assistant streamlining accounting, automating tasks, and enabling data-driven decisions for businesses.",
-      // "Deskera Copilot is an AI-powered assistant, that automate routine tasks, generate insightful reports, and provide intelligent recommendations, enhancing productivity and decision-making for businesses. Streamlined accounting processes, improved accuracy, and enabled data-driven decisions through automation and optimization of business operations. I worked as a front-end developer on this project and took ownership of complete UI/UX implementation. The app is highly polished and each small consideration has been taken care of with user's perspective in mind.",
+      "AI assistant for accounting automation and business insights integrated with Deskera software suite. This is WIP, so Live Link redirects to Deskera's AI page.",
     tags: ["React", "deskera-ui-library"],
     imageUrl: deskeraCopilot,
+    actions: [{
+      title: "Live Link",
+      url: "https://www.deskera.com/in/ai"
+    }]
   },
   {
     title: "Deskera Website",
     description:
       "Migrated Deskera's main website from Gatsby to Next.js, improving performance and scalability while ensuring seamless user experience.",
-      // "Deskera Copilot is an AI-powered assistant, that automate routine tasks, generate insightful reports, and provide intelligent recommendations, enhancing productivity and decision-making for businesses. Streamlined accounting processes, improved accuracy, and enabled data-driven decisions through automation and optimization of business operations. I worked as a front-end developer on this project and took ownership of complete UI/UX implementation. The app is highly polished and each small consideration has been taken care of with user's perspective in mind.",
     tags: ["React", "Next", "Tailwind"],
     imageUrl: deskeraWebsite,
+    actions: [{
+      title: "Live Link",
+      url: "https://deskera.com/"
+    }]
   },
   {
     title: "Deskera Books",
     description:
       "Deskera Books is a comprehensive accounting platform that simplifies financial management for businesses.",
-      // I contributed to the UI development, ensuring a user-friendly and efficient interface.",
     tags: ["React", "deskera-ui-library"],
     imageUrl: deskeraBooks,
+    actions: [{
+      title: "Live Link",
+      url: "https://booksplus.deskera.com/"
+    }],
   },
   {
     title: "Codeial",
@@ -66,6 +75,10 @@ export const projectsData = [
       "Codeial is a social media platform where people can interact. It has all the basic features of a social media platform.",
     tags: ["EJS", "Node", "Express", "MongoDB"],
     imageUrl: codeial,
+    actions: [{
+      title: "Github Link",
+      url: "https://github.com/anuragDeol/codeial-social-media-app"
+    }],
   },
   {
     title: "Find my meal",
@@ -73,6 +86,17 @@ export const projectsData = [
       "Find My Meal is a meal finder app built during my bootcamp, allowing users to search, save, and view meal details with a persistent favorite meals list.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: findMyMeal,
+    textColor: "text-gray-200",
+    actions: [
+      {
+        title: "Live Link",
+        url: "https://anuragdeol.github.io/meal-finder-app/"
+      },
+      {
+        title: "Github Link",
+        url: "https://github.com/anuragDeol/meal-finder-app"
+      }
+    ],
   },
   {
     title: "Tenzies",
@@ -80,13 +104,34 @@ export const projectsData = [
       "Tenzies is a fun little dice-rolling game where players aim to score points by rolling ten matching dice.",
     tags: ["React"],
     imageUrl: tenzies,
+    actions: [
+      {
+        title: "Live Link",
+        url: "https://stunning-biscotti-497ca9.netlify.app/"
+      },
+      {
+        title: "Github Link",
+        url: "https://github.com/anuragDeol/tenzies-game"
+      }
+    ]
   },
   {
     title: "Music Player",
     description:
-      "My first ever project, a music player built using HTML, CSS but no JavaScript.",
+      "My first ever project, a music player built using HTML.",
     tags: ["HTML", "CSS"],
     imageUrl: musicPlayer,
+    textColor: "text-gray-200",
+    actions: [
+      {
+        title: "Github Link",
+        url: "https://github.com/anuragDeol/music-player"
+      },
+      {
+        title: "Video",
+        url: "https://youtu.be/aoQDGR6s8sc"
+      }
+    ]
   },
 ] as const;
 
