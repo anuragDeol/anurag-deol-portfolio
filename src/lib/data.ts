@@ -39,7 +39,7 @@ export const projectsData = [
   {
     title: "Deskera Copilot",
     description:
-      "AI assistant for accounting automation and business insights integrated with Deskera software suite. This is WIP, so Live Link redirects to Deskera's AI page.",
+      "AI assistant for accounting automation and business insights integrated with Deskera software suite. This is WIP, so Live Link redirects to Deskera's AI page for now.",
     tags: ["React", "deskera-ui-library"],
     imageUrl: deskeraCopilot,
     actions: [{
@@ -72,7 +72,7 @@ export const projectsData = [
   {
     title: "Codeial",
     description:
-      "Codeial is a social media platform where people can interact. It has all the basic features of a social media platform.",
+      "A capstone project that I built during my bootcamp, it has all the features of a social media platform including CRUD operations.",
     tags: ["EJS", "Node", "Express", "MongoDB"],
     imageUrl: codeial,
     actions: [{
@@ -86,7 +86,6 @@ export const projectsData = [
       "Find My Meal is a meal finder app built during my bootcamp, allowing users to search, save, and view meal details with a persistent favorite meals list.",
     tags: ["HTML", "CSS", "JavaScript"],
     imageUrl: findMyMeal,
-    textColor: "text-gray-200",
     actions: [
       {
         title: "Live Link",
@@ -121,7 +120,6 @@ export const projectsData = [
       "My first ever project, a music player built using HTML.",
     tags: ["HTML", "CSS"],
     imageUrl: musicPlayer,
-    textColor: "text-gray-200",
     actions: [
       {
         title: "Github Link",

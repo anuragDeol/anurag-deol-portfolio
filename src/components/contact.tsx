@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SectionHeading from "@/components/section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -10,6 +10,20 @@ import { sendEmail } from "@/app/actions/sendEmail";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (formData: FormData) => {
+    const { data, error } = await sendEmail(formData);
+
+    if (data) {
+      toast.success("Email sent successfully!");
+      setEmail("");
+      setMessage("");
+    } else if (error) {
+      toast.error(error);
+    }
+  };
 
   return (
     <motion.section
@@ -32,26 +46,12 @@ export default function Contact() {
       <SectionHeading>Contact me</SectionHeading>
 
       <p className="text-gray-700 -mt-6 dark:text-white/80">
-         Got feedback, questions, or just want to say hi?
-        {/* Please contact me directly at{" "}
-        <a className="underline" href="mailto:anuragdeol2017@gmail.com">
-          anuragdeol2017@gmail.com
-        </a>{" "}
-        or through this form. */}
+         Got some work, feedback, questions, or just want to say hi?
       </p>
 
       <form
         className="mt-10 flex flex-col dark:text-black"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
-          if(data)
-            toast.success("Email sent successfully!");
-          else if (error) {
-            toast.error(error);
-            return;
-          }
-
-        }}
+        action={handleSubmit}
       >
         <input
           className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -60,6 +60,8 @@ export default function Contact() {
           required
           maxLength={500}
           placeholder="Your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <textarea
           className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
@@ -67,6 +69,8 @@ export default function Contact() {
           placeholder="Your message"
           required
           maxLength={5000}
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
         />
         <SubmitBtn />
       </form>

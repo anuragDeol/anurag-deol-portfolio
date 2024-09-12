@@ -11,14 +11,12 @@ export default function Project({
   description,
   tags,
   imageUrl,
-  textColor,
   actions
 }: {
   title: string;
   description: string;
   tags: string[];
   imageUrl: string;
-  textColor?: string;
   actions: {
     title: string;
     url: string;
@@ -30,7 +28,6 @@ export default function Project({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
-  console.log(title, textColor)
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
@@ -41,7 +38,6 @@ export default function Project({
         key={index}
         href={url}
         className={`relative flex p-4 text-left transition-opacity duration-100 ${className}`}
-        // className={`relative flex bg-slate-900 bg-opacity-10 backdrop-filter backdrop-blur-md rounded-2xl p-4 h-[120px] w-[120px] text-left ${textColor ?? " text-gray-900"} opacity-0 group-hover:opacity-100 transition-opacity duration-100`}
       >
         <span className="text-base font-bold">{title}</span>
         <FaArrowUpRightFromSquare className="text-base absolute bottom-5 right-5" />
@@ -98,7 +94,7 @@ export default function Project({
             getActionButton({
               title: item.title,
               url: item.url,
-              className: `h-[120px] w-[120px] rounded-2xl bg-slate-900 bg-opacity-10 backdrop-filter backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-100 ${textColor ?? " text-gray-900"}`,
+              className: `h-[120px] w-[120px] rounded-2xl bg-black bg-opacity-40 backdrop-filter backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-100 text-gray-50`,
               index: index
             })
           ))}
