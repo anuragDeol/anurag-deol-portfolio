@@ -44,7 +44,7 @@ export const projectsData = [
     imageUrl: deskeraCopilot,
     actions: [{
       title: "Live Link",
-      url: "https://www.deskera.com/in/ai"
+      url: "https://www.npmjs.com/package/deskera-copilot"
     }]
   },
   {
