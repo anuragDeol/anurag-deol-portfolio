@@ -45,8 +45,9 @@ export default function Intro() {
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <div className="flex gap-4">
               <a
+                target="_blank"
                 className="group bg-white px-4 lg:px-7 py-4 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 transition cursor-pointer borderBlack dark:bg-white/10 text-sm"
-                href={`/assets/docs/Anurag_Resume.pdf`}
+                href={`https://drive.google.com/file/d/17_tkTUdN5F7hR577vSseO1KzHGmSYQE-/view`}
                 download
               >
                 My Resume{" "}
@@ -95,8 +96,6 @@ export default function Intro() {
         <Image
           src={theme === "light" ? profile_image : profile_image_dark}
           alt="Anurag Deol"
-          // width={700}
-          // height={50}
           priority={true}
           className="h-[250px] md:h-[300px] w-[250px] md:min-w-[300px] rounded-full md:rounded-[100px] object-cover shadow-xl"
         />

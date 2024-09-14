@@ -11,10 +11,30 @@ import VisitorCounter from "@/components/visitor-count";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anurag Deol",
-  description: "Welcome to Anurag Deol's portfolio website.",
+  title: "Anurag Deol | Portfolio",
+  description: "Welcome to Anurag Deol's portfolio website. Explore my projects, skills, and experiences in software development.",
+  keywords: ["Anurag Deol", "Web Developer", "Portfolio", "React", "Next.js", "Tailwind CSS", "JavaScript", "TypeScript", "HTML", "CSS", "Web Development", "Portfolio Website", "SDE", "Deskera", "AI"],
+  authors: [{ name: "Anurag Deol" }],
+  creator: "Anurag Deol",
+  publisher: "Anurag Deol",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.anuragdeol.com",
+    siteName: "Anurag Deol Portfolio",
+    images: [
+      {
+        url: "https://www.anuragdeol.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Anurag Deol Portfolio",
+      },
+    ],
+  },
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-icon.png",
   },
 };
 
@@ -25,6 +45,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
+      <head>
+        <link rel="canonical" href="https://www.anuragdeol.com" />
+        <meta name="robots" content="index, follow" />
+      </head>
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-[#151515] dark:text-gray-50 dark:text-opacity-90`}
       >
