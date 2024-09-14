@@ -20,20 +20,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.anuragdeol.com",
+    url: "https://anuragdeol.vercel.app/",
     siteName: "Anurag Deol Portfolio",
-    images: [
-      {
-        url: "https://www.anuragdeol.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Anurag Deol Portfolio",
-      },
-    ],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-icon.png",
   },
 };
 
@@ -45,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <head>
-        <link rel="canonical" href="https://www.anuragdeol.com" />
+        <link rel="canonical" href="https://anuragdeol.vercel.app/" />
         <meta name="robots" content="index, follow" />
       </head>
       <body
