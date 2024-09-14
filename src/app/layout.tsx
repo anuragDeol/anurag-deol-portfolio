@@ -6,7 +6,6 @@ import Header from "@/components/header";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
-import VisitorCounter from "@/components/visitor-count";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,7 +56,6 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
               <Header />
-              <VisitorCounter />
               {children}
               <Footer />
               <Toaster 
